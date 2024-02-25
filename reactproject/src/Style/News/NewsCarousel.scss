@@ -1,0 +1,75 @@
+/* Updated Sass code for NewsCarousel.scss */
+
+.news-carousel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  align-items: center;
+}
+
+.hidden-card {
+  display: none;
+}
+
+.card {
+  width: 70%;
+  max-height: 20vh;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  h3 {
+    color: #333333;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #666666;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.center-card {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: #333333;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 10px;
+}

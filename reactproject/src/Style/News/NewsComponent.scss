@@ -1,0 +1,71 @@
+/* Updated Sass code for NewsComponent.scss */
+
+.news-component {
+  display: flex;
+  width: 70%;
+  max-height: 20vh;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: left;
+  overflow: hidden; /* Ensure content doesn't overflow the card */
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.centered {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  .title-container {
+    width: 100%;
+    padding-bottom: 10px; /* Add padding between title and content */
+  }
+
+  h3 {
+    color: #333333;
+    margin-bottom: 0;
+  }
+
+  .content-container {
+    display: flex;
+    flex: 1;
+  }
+
+  .image-container {
+    flex: 0 0 30%; /* Adjust the width of the image container as needed */
+    max-height: 100%; /* Ensure image doesn't exceed the card's height */
+    overflow: hidden;
+    border-radius: 8px 0 0 8px; /* Add border-radius to match the card */
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%; /* Set max-width to ensure the image doesn't exceed its natural size */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px; /* Add border-radius to match the card */
+  }
+
+  .text-container {
+    flex: 1;
+    padding: 0 10px; /* Adjust the padding as needed */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack text content vertically */
+  }
+
+  p {
+    color: #666666;
+    margin-bottom: 0; /* Ensure no margin at the bottom of the paragraph */
+  }
+}
